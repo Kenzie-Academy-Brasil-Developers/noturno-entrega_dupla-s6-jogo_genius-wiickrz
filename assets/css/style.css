@@ -1,0 +1,401 @@
+body {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1C1C1C;
+    border: 3px solid #fff;
+    animation: neon 3s alternate infinite ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    animation: neon 3s alternate infinite ease-in-out;
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 #fff);
+    }
+    to {
+        filter: drop-shadow(0 0 30px #fff);
+    }
+}
+
+/* estilização da verificação de resultado */
+
+.check {
+    width: 80px;
+    border-left: 3px solid #fff;
+    height: 8vh;
+    animation: neon 3s alternate infinite ease-in-out;
+}
+
+/* estilização do menu hamburguer */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 8vh;
+    border-right: 3px solid #fff;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    animation: neon 3s alternate infinite #fff;
+}
+
+.line {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+
+.line::before {
+    transform: translateY(-16px);
+}
+
+.line::after {
+    transform: translateY(16px);
+}
+
+.menu.open .line {
+    transform: translate(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu.open .line::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu.open .line::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.scored-list {
+    width: 60%;
+    height: 91vh;
+    position: absolute;
+    top: 8vh;
+    left: -60vw;
+    background-color: #fff;
+    color: #1C1C1C;
+    transition: all .5s ease-in-out;
+    border-radius: 0 40px 40px 0;
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+
+.listScore {
+    width: 60%;
+    height: 91vh;
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    background-color: #fff;
+    color: #1C1C1C;
+    transition: all .5s ease-in-out;
+    border-radius: 0 40px 40px 0;
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+
+.listScore li {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+/* Estilização da secão de mensagens */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 92vh;
+    text-align: center;
+    background-color: #292929;
+}
+
+.display {  
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-green {  
+    background-color: #3AFA20;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-red {  
+    background-color: #FA1B00;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-yellow { 
+    background-color: #FFF821; 
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-blue {  
+    background-color: #0400ff;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreDisplay {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.display button {
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.start:disabled, .button-green:disabled, .button-yellow:disabled, .button-red:disabled, .button-blue:disabled {
+    cursor: default;
+}
+
+/* Estilização dos botões */
+
+.buttons {
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 32vh;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-top: 3px solid #fff;
+}
+
+.button-green {
+    background-color: rgb(37, 112, 37);
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.button-red {
+    background-color: rgb(150, 59, 59);
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.button-blue {
+    background-color: rgb(49, 49, 131);
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.button-yellow {
+    background-color: rgb(161, 161, 48);
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.shine-green {
+    background-color: #3AFA20;
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.shine-red {
+    background-color: #FA1B00;
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.shine-yellow {
+    background-color: #FFF821;
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.shine-blue {
+    background-color: #0400ff;
+    width: 40%;
+    min-width: 120px;
+    height: 45%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+@media (min-width: 580px){
+    .buttons {
+        flex-wrap: nowrap;
+    }
+
+    .button-green {
+        background-color: rgb(37, 112, 37);
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .button-red {
+        background-color: rgb(150, 59, 59);
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .button-blue {
+        background-color: rgb(49, 49, 131);
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .button-yellow {
+        background-color: rgb(161, 161, 48);
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .shine-green {
+        background-color: #3AFA20;
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .shine-red {
+        background-color: #FA1B00;
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .shine-yellow {
+        background-color: #FFF821;
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    
+    .shine-blue {
+        background-color: #0400ff;
+        width: 40%;
+        min-width: 60px;
+        height: 80%;
+        margin: 10px 15px;
+        cursor: pointer; 
+    }
+
+    /* Estilização das mensagens */
+
+    .display, .display-green, .display-red, .display-blue, .display-yellow {
+        font-size: 32px;
+    }
+
+    .display button {
+        font-size: 42px;
+        height: 100px;
+        width: 300px;
+    }
+
+    .listScore, .scored-list, .listScore li, .scored-list li{
+        font-size: 36px;
+        padding: 30px;
+    }
+
+}

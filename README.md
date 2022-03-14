@@ -24,14 +24,14 @@ Assim por diante , até que o usuário erre a sequência.
 
 É possível criar diferentes versões do jogo, mas esse é o **exemplo** do jogo original.
 
-![Jogo Original do GENIUS](./img/genius_game.jpg)
+![Jogo Original do GENIUS](./assets/img/genius_game.jpg)
 
 - O jogo deverá ter alguma representação gráfica dos botões com as luzes;
 - Na página deverá mostrar um feedback para o usuário quando ele deverá jogar e se ele acertou a sequência;
 - O resultado da jogada deverá ser mostrado na tela;</li>
 - O jogo deverá ter um botão de "Jogar novamente" para realizar uma nova tentativa.
 
-![Exemplo do jogo](./img/genius-game-gif.gif)
+![Exemplo do jogo](./assets/img/genius-game-gif.gif)
 
     **IMPORTANTE!**
         O layout do jogo apresentado acima é apenas um modelo.
